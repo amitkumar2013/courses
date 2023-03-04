@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
 const Index = ({ courses }) => {
   return (
     <div>
-      <h1>Courses</h1>
+      <h1>Full Courses</h1>
       <pre>{JSON.stringify(courses, null, 2)}</pre>
     </div>
   );

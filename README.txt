@@ -13,3 +13,6 @@ $ pnpm add -D tailwindcss@latest postcss@latest autoprefixer@latest
 $ pnpm build
 
 $ pnpm setup && pnpm add -g vercel
+$ vercel login
+$ vercel --prod 
+    -- Make sure github is connected and .env is copied to Environment_Variables in Vercel
