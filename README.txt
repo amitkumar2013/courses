@@ -16,3 +16,8 @@ $ pnpm setup && pnpm add -g vercel
 $ vercel login
 $ vercel --prod 
     -- Make sure github is connected and .env is copied to Environment_Variables in Vercel
+
+$ pnpm add @auth0/nextjs-auth0
+
+With every schema changes run 
+$ pnpx prisma migrate [ dev --name create-user-schema | reset ]

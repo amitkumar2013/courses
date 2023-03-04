@@ -4,6 +4,7 @@
   "description": "$ mkdir courses && cd courses && npm init -y $ pnpm add next react react-dom",
   "main": "tailwind.config.js",
   "dependencies": {
+    "@auth0/nextjs-auth0": "^2.2.2",
     "@prisma/client": "^4.11.0",
     "axios": "^1.3.4",
     "next": "^13.2.3",
