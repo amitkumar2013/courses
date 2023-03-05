@@ -1,5 +1,6 @@
 import { getCourses } from '../utils/db';
-import { useUser } from '@auth0/nextjs-auth0';
+import { useUser } from '@auth0/nextjs-auth0/client';
+import Container from '../components/Container';
 
 export const getStaticProps = async () => {
   const data = await getCourses();
@@ -17,16 +18,13 @@ const Index = ({ courses }) => {
   if (error) return <div>{error.message}</div>;
 
   return (
-    <div>
-      {
-        <div>
-          user ? Welcome {user.name}! <a href="/api/auth/logout">Logout</a> :
-          Welcome Guest! <a href="/api/auth/login">Login</a>
-        </div>
-      }
-      <h1>Full Courses</h1>
-      <pre>{JSON.stringify(courses, null, 2)}</pre>
-    </div>
+    <Container>
+      <div>
+        <div>User: {user ? user.email : 'Guest'}</div>
+        <h1>Available Courses:</h1>
+        <pre>{JSON.stringify(courses, null, 2)}</pre>
+      </div>
+    </Container>
   );
 };
 export default Index;
